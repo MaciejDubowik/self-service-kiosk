@@ -1,8 +1,15 @@
-import Welcome from "./pages/Welcome/Welcome";
+import Header from "./pages/Header/Header";
+import SideBar from "./pages/SideBar/SideBar";
+import "./pages/SideBar/SideBar.css";
+
 
 function App() {
+
   return (
-    <Welcome />
+      <div>
+        <Header />
+        <SideBar />
+      </div>
   );
 }
 

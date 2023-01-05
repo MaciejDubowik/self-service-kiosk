@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    background-color: lightgrey;
+    width: 350px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
