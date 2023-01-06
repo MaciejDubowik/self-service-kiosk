@@ -3,7 +3,7 @@
     padding: 0;
 }
 .sidebar{
-    background-color: lightgrey;
+    position: absolute;
     width: 350px;
     overflow-y: auto;
     max-height: calc(100vh - 150px);

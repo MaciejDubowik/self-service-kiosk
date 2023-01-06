@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    left: 350px;
+    max-width: calc(100vw - 350px);
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}

@@ -8,8 +8,8 @@ import categoryData from "../../data/categoryData"
 function SideBar(){
 
     return (
-        <div>
-        <section className="sidebar">
+
+        <aside className="sidebar">
             {categoryData.map(item => {
                 return (
                     <SideBarCard
@@ -18,8 +18,8 @@ function SideBar(){
                     />
                 )
             })}
-        </section>
-        </div>
+        </aside>
+        
     );
 };
 
