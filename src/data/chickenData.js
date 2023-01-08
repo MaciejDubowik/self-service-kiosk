@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    img: "public/img/chicken/chicken-box.png",
+    img: "chicken-box.png",
     title: "Chicken Box",
     directory: "/img/chicken",
     price: 12.98,
@@ -37,7 +37,7 @@ export default [
   {
     id: 6,
     img: "selects-3.jpeg",
-    title: "3 Piece Chicken Selects",
+    title: "3 Piece Selects",
     directory: "/img/chicken",
     price: 3.48,
   },
@@ -45,7 +45,7 @@ export default [
   {
     id: 7,
     img: "selects-5.jpeg",
-    title: "5 Piece Chicken Selects",
+    title: "5 Piece Selects",
     directory: "/img/chicken",
     price: 5.26,
   },

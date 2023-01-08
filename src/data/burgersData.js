@@ -39,7 +39,7 @@ export default [
     img: "veggie-burger.png",
     title: "Veggie Burger",
     directory: "/img/burgers",
-    price: 5.60
+    price: 5.68
   },
 
   {
@@ -47,41 +47,41 @@ export default [
     img: "cheeseburger.png",
     title: "Cheeseburger",
     directory: "/img/burgers",
-    price: 2.50
+    price: 2.48
   },
   {
     id: 8,
     img: "chikker.png",
     title: "Chikker",
     directory: "/img/burgers",
-    price: 2.50
+    price: 2.48
   },
   {
     id: 9,
     img: "hamburger.png",
     title: "Hamburger",
     directory: "/img/burgers",
-    price: 2.00
+    price: 2.12
   },
   {
     id: 10,
     img: "jalapeno-burger.png",
     title: "Jalapeno Burger",
     directory: "/img/burgers",
-    price: 2.60
+    price: 2.62
   },
   {
     id: 11,
     img: "McDouble.png",
     title: "McDouble",
     directory: "/img/burgers",
-    price: 3.50
+    price: 3.58
   },
   {
     id: 12,
     img: "red-chikker.png",
     title: "Red Chikker",
     directory: "/img/burgers",
-    price: 2.60
+    price: 2.62
   }
 ];

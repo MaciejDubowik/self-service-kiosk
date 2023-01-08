@@ -19,7 +19,7 @@ function SideBar(){
                 )
             })}
         </aside>
-        
+
     );
 };
 
