@@ -1,16 +1,16 @@
 import React from "react";
 import "../../assets/menuArrangement.css";
 import "../MenuCard/menuCard.css";
-import burgersData from "../../data/burgersData";
 import MenuCard from "../MenuCard/MenuCard";
+import sweetsData from "../../data/sweetsData";
 
-function Burgers(props) {
+function Sweets() {
   return (
     <div className="main-section">
-      {burgersData.map((item) => {
+      {sweetsData.map((item) => {
         return <MenuCard key={item.id} {...item} />;
       })}
     </div>
   );
 }
-export default Burgers;
+export default Sweets;
