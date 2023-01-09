@@ -16,6 +16,7 @@ function App() {
             <div>
                 <Header />
                 <SideBar />
+
                 <Routes>
                     <Route path="/burgers" element={<Burgers />} />
                     <Route path="/chicken" element={<Chicken />} />
