@@ -5,24 +5,31 @@ import "./menuCardModal.css";
 
 function MenuCardModal(props) {
     const [show, setShow] = useState(true);
-    const prop1 = props.prop1;
+    const [fullscreen, setFullscreen] = useState(true);
+    const imgPath = props.image;
+    const title = props.title;
+    const price = props.price;
     return (
         <>
-            <Modal className="modal-sizing"
-                show={show}
-                onHide={() => setShow(false)}
-                dialogClassName="modal-90w"
-                aria-labelledby="example-custom-modal-styling-title"
-            >
+            {/*fullscreen={fullscreen} onHide={() => setShow(false)}*/}
+            <Modal show={show} data-keyboard="false" data-backdrop="static">
                 <Modal.Header closeButton>
-                    <Modal.Title id="example-custom-modal-styling-title">
-                        Custom Modal Styling
-                    </Modal.Title>
+                    <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>
-                        {prop1}
-                    </p>
+                    <div className="main-container">
+                        <div className="modal-image">
+                            <img src={imgPath} alt="" className="modal-image"/>
+                        </div>
+                        <div className="button-section">
+                            <button>random text</button>
+                            <h1>Przyciski</h1>
+                            <p>{title}</p>
+                            <p>{price}</p>
+
+                        </div>
+                    </div>
+
                 </Modal.Body>
             </Modal>
         </>

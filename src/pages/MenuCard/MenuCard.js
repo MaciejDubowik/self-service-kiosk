@@ -14,7 +14,7 @@ function MenuCard(props){
         <button onClick={handleClick} className="menu-card">
             {isShown && (
                 <div>
-                    <MenuCardModal prop1={props.title}/>
+                    <MenuCardModal title={props.title} image={imgPath} price={props.price}/>
                 </div>
             )}
 
