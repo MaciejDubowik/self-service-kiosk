@@ -15,7 +15,6 @@ function MenuCard(props){
     const handleClick = event => {
         setIsShown(current => !current);
     };
-
     function handleShow(breakpoint) {
         setFullscreen(breakpoint);
         setShow(true);
@@ -51,11 +50,11 @@ function MenuCard(props){
                             <h1>Przyciski</h1>
                             <p>{title}</p>
                             <p>{price}</p>
-                            <Button onClick={() => addToCart(price)}>Dodaj do koszyka</Button>
+                            <Button onClick={() => addToCart({title, price})}>Dodaj do koszyka</Button>
                         </div>
                     </div>
                 </Modal.Body>
             </Modal>
-</>
+        </>
     )}
 export default MenuCard;

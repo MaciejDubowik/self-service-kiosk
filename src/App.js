@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./pages/Header/Header";
 import SideBar from "./pages/SideBar/SideBar";
@@ -11,8 +11,11 @@ import Sweets from "./pages/Sweets/Sweets";
 import Wraps from "./pages/Wraps/Wraps";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
+import { CartContext } from './pages/ShoppingCart/CardContext';
+
 function App() {
     const path = window.location.pathname;
+    const [cart, setCart] = useState([]);
     return (
         <BrowserRouter>
             <div>
@@ -25,7 +28,9 @@ function App() {
                     <Route path="/friesAndSides" element={<FriesAndSides />} />
                     <Route path="/sweets" element={<Sweets />} />
                     <Route path="/wraps" element={<Wraps />} />
-                    <Route path="/shoppingCart" element={<ShoppingCart />} />
+                    <Route path="/shoppingCart" element={        <CartContext.Provider value={{ cart, setCart }}>
+                        <ShoppingCart />
+                    </CartContext.Provider>} />
                 </Routes>
             </div>
         </BrowserRouter>

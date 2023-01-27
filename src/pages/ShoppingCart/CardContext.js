@@ -9,8 +9,8 @@ export function useCart() {
 
         currentCart.push(item);
         localStorage.setItem('cart', JSON.stringify(currentCart));
-        console.log(cart);
+        setCart(currentCart);
     }
 
     return { cart, addToCart };
-    }
+}
