@@ -9,14 +9,15 @@ import Drinks from "./pages/Drinks/Drinks";
 import FriesAndSides from "./pages/FriesAndSides/FriesAndSides";
 import Sweets from "./pages/Sweets/Sweets";
 import Wraps from "./pages/Wraps/Wraps";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 function App() {
+    const path = window.location.pathname;
     return (
         <BrowserRouter>
             <div>
                 <Header />
-                <SideBar />
-
+                {path !== '/shoppingCart' && <SideBar />}
                 <Routes>
                     <Route path="/burgers" element={<Burgers />} />
                     <Route path="/chicken" element={<Chicken />} />
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/friesAndSides" element={<FriesAndSides />} />
                     <Route path="/sweets" element={<Sweets />} />
                     <Route path="/wraps" element={<Wraps />} />
+                    <Route path="/shoppingCart" element={<ShoppingCart />} />
                 </Routes>
             </div>
         </BrowserRouter>

@@ -11,8 +11,7 @@ function MenuCardModal(props) {
     const price = props.price;
     return (
         <>
-            {/*fullscreen={fullscreen} onHide={() => setShow(false)}*/}
-            <Modal show={show} data-keyboard="false" data-backdrop="static">
+            <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>{title}</Modal.Title>
                 </Modal.Header>
@@ -22,7 +21,6 @@ function MenuCardModal(props) {
                             <img src={imgPath} alt="" className="modal-image"/>
                         </div>
                         <div className="button-section">
-                            <button>random text</button>
                             <h1>Przyciski</h1>
                             <p>{title}</p>
                             <p>{price}</p>
