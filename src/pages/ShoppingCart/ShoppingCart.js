@@ -27,6 +27,12 @@ function ShoppingCart() {
 
 function Cart({ items }) {
     const total = items.reduce((acc, item) => acc + item.price, 0);
+    const { cart, setCart } = useContext(CartContext);
+    const removeFromCart = (item) => {
+        setCart(cart.filter(i => i !== item));
+        localStorage.setItem('cart', JSON.stringify(cart.filter(i => i !== item)));
+    }
+
     return (
         <div>
             <h2>Cart</h2>
@@ -34,6 +40,7 @@ function Cart({ items }) {
                 {items.map((item) => (
                     <li>
                         {item.title} - ${item.price}
+                        <button onClick={() => removeFromCart(item)}>Remove</button>
                     </li>
                 ))}
             </ul>

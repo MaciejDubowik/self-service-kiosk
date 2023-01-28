@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import MenuCardModal from "../MenuCardModal/MenuCardModal.js";
 import {ButtonToolbar, Modal} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { useCart } from '../ShoppingCart/CardContext';
@@ -18,18 +17,10 @@ function MenuCard(props){
     function handleShow(breakpoint) {
         setFullscreen(breakpoint);
         setShow(true);
-        addToCart({ title, price });
     }
     return(
         <>
             <Button onClick={handleShow} className="menu-card">
-                {isShown && (
-                    <div>
-                        <MenuCardModal title={props.title} image={imgPath} price={props.price}/>
-                    </div>
-                )}
-
-
                 <img src={imgPath} alt="" className="menu-card-image"/>
                 <div className="menu-card-text">
                     <div className="menu-card-title">{props.title}</div>
@@ -47,6 +38,7 @@ function MenuCard(props){
                             <img src={imgPath} alt="" className="modal-image"/>
                         </div>
                         <div className="button-section">
+                            <button> test</button>
                             <h1>Przyciski</h1>
                             <p>{title}</p>
                             <p>{price}</p>
