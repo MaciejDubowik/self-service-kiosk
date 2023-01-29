@@ -14,6 +14,7 @@ import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import { CartContext } from './pages/ShoppingCart/CardContext';
 import Welcome from "./pages/Welcome/Welcome";
 import OrderMethod from "./pages/OrderMethod/OrderMethod";
+import AdminPage from "./pages/Admin/AdminPage";
 
 function App() {
     const path = window.location.pathname;
@@ -22,7 +23,7 @@ function App() {
         <BrowserRouter>
             <div>
                 {path !== '/' && <Header />}
-                {path !== '/shoppingCart' && path !== '/' && path !== '/orderMethod'&& <SideBar />}
+                {path !== '/shoppingCart' && path !== '/' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
                 <Routes>
                     <Route path="/" element={<Welcome />} />
                     <Route path="/orderMethod" element={<OrderMethod />} />
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/friesAndSides" element={<FriesAndSides />} />
                     <Route path="/sweets" element={<Sweets />} />
                     <Route path="/wraps" element={<Wraps />} />
+                    <Route path='/admin' element={<AdminPage />} />
                     <Route path="/shoppingCart" element={        <CartContext.Provider value={{ cart, setCart }}>
                         <ShoppingCart />
                     </CartContext.Provider>} />
