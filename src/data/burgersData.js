@@ -4,7 +4,13 @@ export default [
     img: "big-mac.png",
     title: "Big-Mac",
     directory: "/img/burgers",
-    price: 5.44
+    price: 5.44,
+    ingredients: {
+      meat: 1,
+      salad: 0,
+      tomato: 2,
+      cheese: 2
+    }
   },
   {
     id: 2,

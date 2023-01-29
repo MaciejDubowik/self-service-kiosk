@@ -12,6 +12,8 @@ import Wraps from "./pages/Wraps/Wraps";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 import { CartContext } from './pages/ShoppingCart/CardContext';
+import Welcome from "./pages/Welcome/Welcome";
+import OrderMethod from "./pages/OrderMethod/OrderMethod";
 
 function App() {
     const path = window.location.pathname;
@@ -19,9 +21,11 @@ function App() {
     return (
         <BrowserRouter>
             <div>
-                <Header />
-                {path !== '/shoppingCart' && <SideBar />}
+                {path !== '/' && <Header />}
+                {path !== '/shoppingCart' && path !== '/' && path !== '/orderMethod'&& <SideBar />}
                 <Routes>
+                    <Route path="/" element={<Welcome />} />
+                    <Route path="/orderMethod" element={<OrderMethod />} />
                     <Route path="/burgers" element={<Burgers />} />
                     <Route path="/chicken" element={<Chicken />} />
                     <Route path="/drinks" element={<Drinks />} />
