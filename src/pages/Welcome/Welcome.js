@@ -6,11 +6,11 @@ import fries from "./fries-lg.jpeg";
 function Welcome() {
   const navigate = useNavigate();
   return (
-    <div className="container"
-      onClick={() => {
-        navigate("/orderMethod");
-        window.location.reload();
-      }}
+      <div       onClick={() => {
+          navigate("/orderMethod");
+          window.location.reload();
+      }}>
+    <div className="container">
     >
       <h1 className="title">
         Witamy w restauracji McDonalds! <br /><br /><br />
@@ -18,6 +18,7 @@ function Welcome() {
       </h1>
       <img className="welcome-photo" src={fries} />
     </div>
+      </div>
   );
 }
 export default Welcome;

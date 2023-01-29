@@ -36,6 +36,14 @@
     height: auto;
 }
 
+.button-image-cash{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 70%;
+    height: auto;
+}
+
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;

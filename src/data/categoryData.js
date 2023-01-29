@@ -20,9 +20,9 @@ export default [
      },
     {
         id: 4,
-        title: "Drinks",
-        img: "drinks/cola-classic.jpeg",
-        href: "/drinks"
+        title: "Fries",
+        img: "fries-sides/fries-lg.jpeg",
+        href: "/friesandsides"
     },
     {
         id: 5,

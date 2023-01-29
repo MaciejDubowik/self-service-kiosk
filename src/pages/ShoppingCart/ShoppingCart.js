@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import MenuCard from '../MenuCard/MenuCard';
 import { useCart } from './CardContext';
 import { useContext } from 'react';
 import { CartContext } from './CardContext';
+import Button from "react-bootstrap/Button";
+import {Modal} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 function ShoppingCart() {
     const { cart, setCart } = useContext(CartContext);
+    const navigate = useNavigate();
     useEffect(() => {
         const currentCart = JSON.parse(localStorage.getItem('cart') || "[]");
         setCart(currentCart);
@@ -15,11 +19,41 @@ function ShoppingCart() {
         setCart([...cart, item]);
         localStorage.setItem('cart', JSON.stringify([...cart, item]));
     }
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const handleUnderstoodClick = () => {
+        handleClose();
+        navigate("/paymentMethod");
+    }
 
     return (
         <div>
-            <MenuCard title="Product 1" price={10} onAddToCart={addToCart} />
-            <MenuCard title="Product 2" price={20} onAddToCart={addToCart} />
+            <Button variant="primary" onClick={handleShow}>
+                Launch static backdrop modal
+            </Button>
+            <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal title</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleUnderstoodClick} >Understood</Button>
+                </Modal.Footer>
+            </Modal>
             <Cart items={cart} />
         </div>
     );

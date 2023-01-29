@@ -15,6 +15,8 @@ import { CartContext } from './pages/ShoppingCart/CardContext';
 import Welcome from "./pages/Welcome/Welcome";
 import OrderMethod from "./pages/OrderMethod/OrderMethod";
 import AdminPage from "./pages/Admin/AdminPage";
+import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
+import Confirmation from "./pages/Confirmation/Confirmation";
 
 function App() {
     const path = window.location.pathname;
@@ -22,8 +24,8 @@ function App() {
     return (
         <BrowserRouter>
             <div>
-                {path !== '/' && <Header />}
-                {path !== '/shoppingCart' && path !== '/' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
+                <Header />
+                {path !== '/shoppingCart' && path !== '/' && path !== '/confirmation' && path !== '/paymentMethod' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
                 <Routes>
                     <Route path="/" element={<Welcome />} />
                     <Route path="/orderMethod" element={<OrderMethod />} />
@@ -37,6 +39,8 @@ function App() {
                     <Route path="/shoppingCart" element={        <CartContext.Provider value={{ cart, setCart }}>
                         <ShoppingCart />
                     </CartContext.Provider>} />
+                    <Route path="/paymentMethod" element={<PaymentMethod />} />
+                    <Route path="/confirmation" element={<Confirmation/>} />
                 </Routes>
             </div>
         </BrowserRouter>
