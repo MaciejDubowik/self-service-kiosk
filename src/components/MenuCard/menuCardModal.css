@@ -1,0 +1,23 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.modal-image {
+  width: 600px;
+  height: 800px;
+  border: 2px solid black;
+  border-radius: 9px;
+  object-fit: none;
+  object-position: center;
+}
+
+.button-section {
+  margin-top: 10%;
+  width: 600px;
+  margin-left: 150px;
+}
+
+/*# sourceMappingURL=menuCardModal.css.map */
