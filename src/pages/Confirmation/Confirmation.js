@@ -1,5 +1,6 @@
-import React, { useReducer, useEffect } from 'react';
+import React, {useReducer, useEffect, useState} from 'react';
 import '../OrderMethod/OrderMethod.css';
+import {useNavigate} from "react-router-dom";
 
 const orderReducer = (state, action) => {
     switch (action.type) {
@@ -11,6 +12,18 @@ const orderReducer = (state, action) => {
 };
 
 function Confirmation() {
+    const [counter, setCounter] = useState(0);
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/");
+        localStorage.removeItem('cart');
+    }
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setCounter(counter + 1);
+        }, 10000);
+        return () => handleClick();
+    }, [counter]);
     const storedOrderNumber = parseInt(localStorage.getItem('orderNumber')) || 0;
     const [state, dispatch] = useReducer(orderReducer, { orderNumber: storedOrderNumber });
     const storedPaymentMethod = localStorage.getItem('paymentMethod');

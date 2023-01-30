@@ -32,3 +32,8 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
     outline: inherit;
 }
+
+.link-decoration{
+    text-decoration: none;
+    color: #343a40;
+}

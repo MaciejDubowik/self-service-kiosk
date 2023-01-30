@@ -32,3 +32,8 @@
   font-size: 35px;
   font-weight: lighter;
 }
+
+.invisible-button {
+  visibility: hidden;
+  pointer-events: none;
+}

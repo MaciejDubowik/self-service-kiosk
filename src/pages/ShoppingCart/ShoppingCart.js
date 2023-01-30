@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import MenuCard from '../MenuCard/MenuCard';
 import { useCart } from './CardContext';
 import { useContext } from 'react';
@@ -6,6 +6,8 @@ import { CartContext } from './CardContext';
 import Button from "react-bootstrap/Button";
 import {Modal} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
+import "./ShoppingCartStyle.css";
+
 
 function ShoppingCart() {
     const { cart, setCart } = useContext(CartContext);
@@ -28,11 +30,16 @@ function ShoppingCart() {
         handleClose();
         navigate("/paymentMethod");
     }
+    const handleClick = () => {
+        navigate("/burgers");
+        window.location.reload();
+    }
 
     return (
         <div>
-            <Button variant="primary" onClick={handleShow}>
-                Launch static backdrop modal
+            <Button variant="outline-success" className="mt-5 ml-20" size="lg"  onClick={handleClick}>Back</Button>
+            <Button variant="outline-success" className="float-right mt-5" size="lg" onClick={handleShow}>
+                Confirm the order and proceed to payment
             </Button>
             <Modal
                 show={show}
@@ -41,17 +48,16 @@ function ShoppingCart() {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal title</Modal.Title>
+                    <Modal.Title>Confirmation</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    I will not close if you click outside me. Don't even try to press
-                    escape key.
+                    Are you sure you want to continue?
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Close
+                        Cancel
                     </Button>
-                    <Button variant="primary" onClick={handleUnderstoodClick} >Understood</Button>
+                    <Button variant="primary" onClick={handleUnderstoodClick} >Go to payment</Button>
                 </Modal.Footer>
             </Modal>
             <Cart items={cart} />
@@ -60,19 +66,19 @@ function ShoppingCart() {
 }
 
 function Cart({ items }) {
-    const total = items.reduce((acc, item) => acc + item.price, 0);
     const { cart, setCart } = useContext(CartContext);
+    const total = useMemo(() => items.reduce((acc, item) => acc + item.price, 0), [items]);
     const removeFromCart = (item) => {
         setCart(cart.filter(i => i !== item));
         localStorage.setItem('cart', JSON.stringify(cart.filter(i => i !== item)));
     }
 
     return (
-        <div>
-            <h2>Cart</h2>
-            <ul>
+        <div className="cart-container">
+            <h2 className="cart-title">Cart</h2>
+            <ul className="cart-list">
                 {items.map((item) => (
-                    <li>
+                    <li className="cart-list-item">
                         {item.title} - ${item.price}
                         <button onClick={() => removeFromCart(item)}>Remove</button>
                     </li>
@@ -82,5 +88,6 @@ function Cart({ items }) {
         </div>
     );
 }
+
 
 export default ShoppingCart;

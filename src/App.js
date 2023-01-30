@@ -17,6 +17,8 @@ import OrderMethod from "./pages/OrderMethod/OrderMethod";
 import AdminPage from "./pages/Admin/AdminPage";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import Confirmation from "./pages/Confirmation/Confirmation";
+import AdminPageEdit from "./pages/Admin/AdminPageEdit";
+import AdminPageReviews from "./pages/Admin/AdminPageReviews";
 
 function App() {
     const path = window.location.pathname;
@@ -25,7 +27,7 @@ function App() {
         <BrowserRouter>
             <div>
                 <Header />
-                {path !== '/shoppingCart' && path !== '/' && path !== '/confirmation' && path !== '/paymentMethod' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
+                {path !== '/shoppingCart' && path !== '/' && path !== '/adminreview' && path !== '/confirmation' && path !== '/review' && path !== '/paymentMethod'  && path !== '/adminedit/1' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
                 <Routes>
                     <Route path="/" element={<Welcome />} />
                     <Route path="/orderMethod" element={<OrderMethod />} />
@@ -40,7 +42,10 @@ function App() {
                         <ShoppingCart />
                     </CartContext.Provider>} />
                     <Route path="/paymentMethod" element={<PaymentMethod />} />
-                    <Route path="/confirmation" element={<Confirmation/>} />
+                    <Route path="/confirmation" element={<Confirmation />} />
+                    <Route path="/adminedit" element={<AdminPageEdit />} />
+                    <Route path="/adminreview" element={<AdminPageReviews />} />
+
                 </Routes>
             </div>
         </BrowserRouter>

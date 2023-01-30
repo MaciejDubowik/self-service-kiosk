@@ -13,8 +13,8 @@ function Welcome() {
     <div className="container">
     >
       <h1 className="title">
-        Witamy w restauracji McDonalds! <br /><br /><br />
-        Kliknij w ekran aby złożyć zamówienie.
+          Welcome to McDonald's restaurant!<br /><br /><br />
+          Click on the screen to place an order.
       </h1>
       <img className="welcome-photo" src={fries} />
     </div>

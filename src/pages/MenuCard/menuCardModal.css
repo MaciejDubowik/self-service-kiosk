@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: purple;
     margin-top: 200px;
 }
 
@@ -11,13 +10,12 @@
     height: 800px;
     border: 2px solid black;
     border-radius: 9px;
-    background-color: green;
     object-fit: none;
     object-position: center;
 
 }
 .button-section{
-    background-color: blue;
+    margin-top:10%;
     width: 600px;
     margin-left: 150px;
 }
