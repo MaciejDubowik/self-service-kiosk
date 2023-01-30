@@ -60,7 +60,7 @@ function MenuCard(props) {
                 <h1>${price}</h1>
 
                 <Button variant="outline-success" className="mt-3" size="lg" onClick={() => { addToCart({ title, price }); setShow(false); }}>
-                  Dodaj do koszyka
+                  Add to cart
                 </Button>
                 <br/>
                 {props.ingredients && (
