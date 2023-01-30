@@ -18,7 +18,8 @@ import AdminPage from "./pages/Admin/AdminPage";
 import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
 import Confirmation from "./pages/Confirmation/Confirmation";
 import AdminPageEdit from "./pages/Admin/AdminPageEdit";
-import AdminPageReviews from "./pages/Admin/AdminPageReviews";
+import AdminPageReports from "./pages/Admin/AdminPageReports";
+import AdminPageMain from "./pages/Admin/AdminPageMain";
 
 function App() {
     const path = window.location.pathname;
@@ -27,7 +28,7 @@ function App() {
         <BrowserRouter>
             <div>
                 <Header />
-                {path !== '/shoppingCart' && path !== '/' && path !== '/adminreview' && path !== '/confirmation' && path !== '/review' && path !== '/paymentMethod'  && path !== '/adminedit/1' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
+                {path !== '/shoppingCart' && path !== '/' && path !== '/adminreports' && path !== '/confirmation' && path !== '/review' && path !== '/paymentMethod'  && path !== '/adminedit' && path !== '/orderMethod' && path !== '/admin'&& <SideBar />}
                 <Routes>
                     <Route path="/" element={<Welcome />} />
                     <Route path="/orderMethod" element={<OrderMethod />} />
@@ -37,14 +38,15 @@ function App() {
                     <Route path="/friesAndSides" element={<FriesAndSides />} />
                     <Route path="/sweets" element={<Sweets />} />
                     <Route path="/wraps" element={<Wraps />} />
-                    <Route path='/admin' element={<AdminPage />} />
+                    {/*<Route path='/admin' element={<AdminPage />} />*/}
                     <Route path="/shoppingCart" element={        <CartContext.Provider value={{ cart, setCart }}>
                         <ShoppingCart />
                     </CartContext.Provider>} />
                     <Route path="/paymentMethod" element={<PaymentMethod />} />
                     <Route path="/confirmation" element={<Confirmation />} />
-                    <Route path="/adminedit" element={<AdminPageEdit />} />
-                    <Route path="/adminreview" element={<AdminPageReviews />} />
+                    <Route path="/adminedit" element={<AdminPage />} />
+                    <Route path="/adminreports" element={<AdminPageReports />} />
+                    <Route path="/admin" element={<AdminPageMain />} />
 
                 </Routes>
             </div>
