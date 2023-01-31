@@ -1,7 +1,10 @@
 ## Self Service Kiosk (McDonald's Clone)
 
-Application for food ordering in fastfood restaurants. The goal was to get familiar with ReactJS and learn Hooks. I have created an application that has displayed product data, shopping cart and order processing. Created as final project for TFN classes on V SEM PJAIT
+This project is a clone of a McDonald's kiosk built with ReactJS and its hooks. The goal of creating this project was to learn and gain experience with a new technology, specifically React and its hooks. The project allows users to order food items and customize their order, just like at a real McDonald's kiosk.
 
+The project was created with the latest version of React and uses functional components with hooks for state management. The user interface is designed to be user-friendly and responsive, making it easy for users to navigate and place their orders.
+
+Created as final project for TFN classes on V SEM PJAIT
 
 ### Features
 - [x]  JSX
@@ -15,6 +18,9 @@ Application for food ordering in fastfood restaurants. The goal was to get famil
 - [x]  Formik
 - [x]  React Router
 - [ ]  React Redux
+
+### Video
+You can see project presentation [YouTube](https://youtu.be/eXCvQPAaiJs).
 
 ### Screenshots
 ![Zrzut ekranu 2023-01-31 o 22 53 45](https://user-images.githubusercontent.com/77201172/215894342-7f3e8e65-3aef-4f5a-acf1-5e1072ae6bae.png)
