@@ -5,13 +5,13 @@ Application for food ordering in fastfood restaurants. The goal was to get famil
 
 ### Features
 - [x]  JSX
-- [x ]  useState
-- [x ]  useEffect
+- [x]  useState
+- [x]  useEffect
 - [ ]  useLayoutEffect
-- [x ]  useMemo
+- [x]  useMemo
 - [ ]  useRef
-- [x ]  useReducer
-- [x ]  useContext
-- [x ]  Formik
-- [x ]  React Router
+- [x]  useReducer
+- [x]  useContext
+- [x]  Formik
+- [x]  React Router
 - [ ]  React Redux
