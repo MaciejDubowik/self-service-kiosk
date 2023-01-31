@@ -20,7 +20,7 @@ Created as final project for TFN classes on V SEM PJAIT
 - [ ]  React Redux
 
 ### Video
-You can see project presentation [YouTube](https://youtu.be/eXCvQPAaiJs).
+Check out the project presentation on [YouTube](https://youtu.be/eXCvQPAaiJs).
 
 ### Screenshots
 ![Zrzut ekranu 2023-01-31 o 22 53 45](https://user-images.githubusercontent.com/77201172/215894342-7f3e8e65-3aef-4f5a-acf1-5e1072ae6bae.png)
