@@ -1,43 +1,17 @@
-# Self Service Kiosk
+# Self Service Kiosk (McDonalds Clone)
 
-## Task List
+Application for food ordering in fastfood restaurants. The goal was to get familiar with React and learn Hooks. I have created an application that has displayed product data, shopping cart and order processing. Created as final project for TFN classes on V SEM PJAIT
 
-### To Do
 
-- [ ]  Ordering method
-- [ ]  Add resources
-- [ ]  Main page
-- [ ]  Drinks section
-- [ ]  Product pop-up screen
-- [ ]  Order editing page
-- [ ]  Shopping cart
-- [ ]  Implement logic
-- [ ]  Outro
-- [ ]  Admin page basic
-- [ ]  Edit product form
-- [ ]  Stats
-
-### In Progress
-
-- [ ]  Welcome screen
-
-### Done ✓
-
-- [x]  Project setup & structure
-
-### Requirements
-- [ ]  JSX
-- [ ]  useState
-- [ ]  useEffect
+### Features
+- [x]  JSX
+- [x ]  useState
+- [x ]  useEffect
 - [ ]  useLayoutEffect
-- [ ]  useMemo
+- [x ]  useMemo
 - [ ]  useRef
-- [ ]  useReducer
-- [ ]  useContext
-- [ ]  Formik
-- [ ]  React Router
+- [x ]  useReducer
+- [x ]  useContext
+- [x ]  Formik
+- [x ]  React Router
 - [ ]  React Redux
-- [ ]  TypeScript
-- [ ]  tests
-- [ ]  Deploy
-- [ ]  CSS
